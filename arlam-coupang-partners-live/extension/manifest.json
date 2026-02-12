@@ -1,0 +1,33 @@
+{
+    "manifest_version": 3,
+    "name": "Purple Vision Bridge",
+    "version": "1.0",
+    "description": "Bridge Coupang Partners data to Purple Vision Dashboard",
+    "permissions": [
+        "storage",
+        "tabs",
+        "scripting"
+    ],
+    "host_permissions": [
+        "https://partners.coupang.com/*",
+        "http://localhost:3000/*",
+        "https://*.vercel.app/*"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "https://partners.coupang.com/*"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "run_at": "document_idle"
+        }
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action": {
+        "default_title": "Purple Vision Sync"
+    }
+}
