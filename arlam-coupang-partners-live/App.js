@@ -16,8 +16,10 @@ import {
   Settings
 } from 'lucide-react';
 
-// [수정] 파일명이 깃허브에 Types.ts(혹은 .js)로 되어 있다면 대소문자를 맞춰야 합니다.
-import { getPerformanceInsights } from './geminiService.js';
+const getPerformanceInsights = async () => {
+  return { title: "분석 불가", description: "서비스 파일이 없습니다." };
+};
+
 
 // Recharts는 브라우저 직접 실행 시 ESM 임포트가 까다로울 수 있어, 
 // 우선 차트 영역을 제외한 나머지 로직을 안전하게 변환했습니다.
