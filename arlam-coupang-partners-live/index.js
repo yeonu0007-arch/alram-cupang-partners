@@ -1,9 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-// [수정] .tsx 확장자를 명시하거나, App 파일도 .js로 관리해야 합니다.
-import App from './App.tsx'; 
+
+// [중요 수정] 확장자를 반드시 .js로 명시해야 합니다. 
+// (깃허브에서도 App.tsx 파일 이름을 App.js로 변경하셔야 합니다!)
+import App from './App.js'; 
 
 const rootElement = document.getElementById('root');
+
 if (!rootElement) {
     console.error("Root element not found");
 } else {
@@ -13,4 +16,5 @@ if (!rootElement) {
             React.createElement(App)
         )
     );
+}
 }
